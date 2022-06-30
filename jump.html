@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
   
 <head>
-  <title>打开小程序</title>
+  <title>打开健康码</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
   <link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/2.4.1/weui.min.css">
@@ -18,12 +18,12 @@
 <body>
   <div class="page full">
     <div id="public-web-container" class="hidden">
-      <p class="">正在打开穗康码</p> <!-- replace -->
+      <p class="">正在打开健康码</p> <!-- replace -->
       <a id="public-web-jump-button" href="javascript:" class="weui-btn weui-btn_primary weui-btn_loading"
         onclick="openWeapp()">
         <span id="public-web-jump-button-loading" class="weui-primary-loading weui-primary-loading_transparent"><i
             class="weui-primary-loading__dot"></i></span>
-        打开穗康码
+        打开健康码
       </a>
     </div>
     <!-- 跳转小程序的开放标签。文档 https://developers.weixin.qq.com/doc/offiaccount/OA_Web_Apps/Wechat_Open_Tag.html -->
@@ -55,8 +55,8 @@
     return obj;
   }
   var querys = getQueryVariable();
-  var path = querys.path ? decodeURIComponent(querys.path) : 'pages/stat/index'    //  replace  需要跳转的路径
-  var username = 'gh_8052c0bb85ba'// replace username小程序原始id
+  var path = querys.path ? decodeURIComponent(querys.path) : 'pages/index/index'    //  replace  需要跳转的路径
+  var username = 'gh_1ac06b5a8f4e'// replace username小程序原始id
   //  replace username
   $('#wechat-web-container').append(`
     <wx-open-launch-weapp
